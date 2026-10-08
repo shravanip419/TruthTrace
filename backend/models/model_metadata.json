@@ -1,0 +1,943 @@
+{
+  "project": "TruthLens \u2014 Fake News Detection using NLP with Explainable AI",
+  "trained_at": "2026-10-08 15:13:33 UTC",
+  "total_training_duration_seconds": 142.13,
+  "best_model_name": "Linear SVM",
+  "selection_metric": "Highest F1 Score on FAKE news detection",
+  "best_model_metrics": {
+    "name": "Linear SVM",
+    "accuracy": 0.9962,
+    "precision": 0.9989,
+    "recall": 0.9927,
+    "f1_score": 0.9958,
+    "train_time_seconds": 3.892,
+    "confusion_matrix": {
+      "TP": 3555,
+      "FN": 26,
+      "FP": 4,
+      "TN": 4235,
+      "labels": [
+        "FAKE",
+        "REAL"
+      ],
+      "matrix": [
+        [
+          3555,
+          26
+        ],
+        [
+          4,
+          4235
+        ]
+      ]
+    },
+    "classification_report": {
+      "FAKE": {
+        "precision": 0.9988760887889857,
+        "recall": 0.9927394582518849,
+        "f1-score": 0.9957983193277311,
+        "support": 3581.0
+      },
+      "REAL": {
+        "precision": 0.9938981459751232,
+        "recall": 0.9990563812219864,
+        "f1-score": 0.9964705882352941,
+        "support": 4239.0
+      },
+      "accuracy": 0.9961636828644501,
+      "macro avg": {
+        "precision": 0.9963871173820544,
+        "recall": 0.9958979197369356,
+        "f1-score": 0.9961344537815127,
+        "support": 7820.0
+      },
+      "weighted avg": {
+        "precision": 0.996177687307149,
+        "recall": 0.9961636828644501,
+        "f1-score": 0.9961627372176491,
+        "support": 7820.0
+      }
+    },
+    "feature_importance": {
+      "top_fake_indicators": [
+        {
+          "word": "via",
+          "weight": 6.3682
+        },
+        {
+          "word": "read",
+          "weight": 4.1007
+        },
+        {
+          "word": "video",
+          "weight": 3.5793
+        },
+        {
+          "word": "breaking",
+          "weight": 2.6506
+        },
+        {
+          "word": "gop",
+          "weight": 2.3756
+        },
+        {
+          "word": "president trump",
+          "weight": 2.357
+        },
+        {
+          "word": "image",
+          "weight": 2.2623
+        },
+        {
+          "word": "obama",
+          "weight": 2.2421
+        },
+        {
+          "word": "featured image",
+          "weight": 2.1319
+        },
+        {
+          "word": "watch",
+          "weight": 2.004
+        },
+        {
+          "word": "featured",
+          "weight": 1.9034
+        },
+        {
+          "word": "hillary",
+          "weight": 1.8597
+        },
+        {
+          "word": "sen",
+          "weight": 1.8333
+        },
+        {
+          "word": "wire",
+          "weight": 1.7763
+        },
+        {
+          "word": "entire story",
+          "weight": 1.7097
+        },
+        {
+          "word": "rep",
+          "weight": 1.7036
+        },
+        {
+          "word": "getty",
+          "weight": 1.688
+        },
+        {
+          "word": "century wire",
+          "weight": 1.5302
+        },
+        {
+          "word": "getty image",
+          "weight": 1.5049
+        },
+        {
+          "word": "reportedly",
+          "weight": 1.4774
+        }
+      ],
+      "top_real_indicators": [
+        {
+          "word": "reuters",
+          "weight": 14.9527
+        },
+        {
+          "word": "washington reuters",
+          "weight": 4.6356
+        },
+        {
+          "word": "said",
+          "weight": 4.6164
+        },
+        {
+          "word": "president donald",
+          "weight": 2.4492
+        },
+        {
+          "word": "reuters president",
+          "weight": 2.4423
+        },
+        {
+          "word": "york reuters",
+          "weight": 2.0073
+        },
+        {
+          "word": "factbox",
+          "weight": 1.9003
+        },
+        {
+          "word": "nov",
+          "weight": 1.6529
+        },
+        {
+          "word": "tuesday",
+          "weight": 1.6519
+        },
+        {
+          "word": "washington",
+          "weight": 1.6227
+        },
+        {
+          "word": "president barack",
+          "weight": 1.5796
+        },
+        {
+          "word": "wednesday",
+          "weight": 1.5137
+        },
+        {
+          "word": "friday",
+          "weight": 1.3864
+        },
+        {
+          "word": "news conference",
+          "weight": 1.3371
+        },
+        {
+          "word": "television",
+          "weight": 1.2577
+        },
+        {
+          "word": "nov election",
+          "weight": 1.1888
+        },
+        {
+          "word": "thursday",
+          "weight": 1.1874
+        },
+        {
+          "word": "showed",
+          "weight": 1.1725
+        },
+        {
+          "word": "republican president",
+          "weight": 1.157
+        },
+        {
+          "word": "monday",
+          "weight": 1.1537
+        }
+      ],
+      "disclaimer": "These features indicate linguistic patterns learned by the model. They do not independently verify the factual accuracy of the article."
+    },
+    "probability_method": "CalibratedClassifierCV (Platt Sigmoid Scaling on LinearSVC)"
+  },
+  "models_evaluated": {
+    "Logistic Regression": {
+      "name": "Logistic Regression",
+      "accuracy": 0.9908,
+      "precision": 0.9966,
+      "recall": 0.9832,
+      "f1_score": 0.9899,
+      "train_time_seconds": 0.453,
+      "confusion_matrix": {
+        "TP": 3521,
+        "FN": 60,
+        "FP": 12,
+        "TN": 4227,
+        "labels": [
+          "FAKE",
+          "REAL"
+        ],
+        "matrix": [
+          [
+            3521,
+            60
+          ],
+          [
+            12,
+            4227
+          ]
+        ]
+      },
+      "classification_report": {
+        "FAKE": {
+          "precision": 0.9966034531559581,
+          "recall": 0.9832449036581961,
+          "f1-score": 0.989879111610908,
+          "support": 3581.0
+        },
+        "REAL": {
+          "precision": 0.9860041987403779,
+          "recall": 0.997169143665959,
+          "f1-score": 0.9915552427867699,
+          "support": 4239.0
+        },
+        "accuracy": 0.9907928388746803,
+        "macro avg": {
+          "precision": 0.991303825948168,
+          "recall": 0.9902070236620775,
+          "f1-score": 0.990717177198839,
+          "support": 7820.0
+        },
+        "weighted avg": {
+          "precision": 0.990857898236822,
+          "recall": 0.9907928388746803,
+          "f1-score": 0.9907876947380793,
+          "support": 7820.0
+        }
+      },
+      "feature_importance": {
+        "top_fake_indicators": [
+          {
+            "word": "via",
+            "weight": 10.0217
+          },
+          {
+            "word": "video",
+            "weight": 9.9098
+          },
+          {
+            "word": "image",
+            "weight": 6.735
+          },
+          {
+            "word": "read",
+            "weight": 6.3652
+          },
+          {
+            "word": "featured image",
+            "weight": 5.1705
+          },
+          {
+            "word": "featured",
+            "weight": 5.0987
+          },
+          {
+            "word": "obama",
+            "weight": 4.8929
+          },
+          {
+            "word": "gop",
+            "weight": 4.8746
+          },
+          {
+            "word": "president trump",
+            "weight": 4.7005
+          },
+          {
+            "word": "watch",
+            "weight": 4.4171
+          },
+          {
+            "word": "image via",
+            "weight": 4.3694
+          },
+          {
+            "word": "america",
+            "weight": 3.9417
+          },
+          {
+            "word": "hillary",
+            "weight": 3.9277
+          },
+          {
+            "word": "wire",
+            "weight": 3.8747
+          },
+          {
+            "word": "even",
+            "weight": 3.8273
+          },
+          {
+            "word": "getty",
+            "weight": 3.7773
+          },
+          {
+            "word": "american",
+            "weight": 3.7171
+          },
+          {
+            "word": "getty image",
+            "weight": 3.6366
+          },
+          {
+            "word": "breaking",
+            "weight": 3.5974
+          },
+          {
+            "word": "com",
+            "weight": 3.4412
+          }
+        ],
+        "top_real_indicators": [
+          {
+            "word": "reuters",
+            "weight": 19.7694
+          },
+          {
+            "word": "said",
+            "weight": 11.4121
+          },
+          {
+            "word": "washington reuters",
+            "weight": 8.4406
+          },
+          {
+            "word": "president donald",
+            "weight": 5.1115
+          },
+          {
+            "word": "washington",
+            "weight": 5.056
+          },
+          {
+            "word": "wednesday",
+            "weight": 4.2822
+          },
+          {
+            "word": "tuesday",
+            "weight": 4.27
+          },
+          {
+            "word": "reuters president",
+            "weight": 4.0858
+          },
+          {
+            "word": "thursday",
+            "weight": 3.8577
+          },
+          {
+            "word": "friday",
+            "weight": 3.6736
+          },
+          {
+            "word": "monday",
+            "weight": 3.5819
+          },
+          {
+            "word": "minister",
+            "weight": 3.4761
+          },
+          {
+            "word": "nov",
+            "weight": 3.3968
+          },
+          {
+            "word": "told reuters",
+            "weight": 3.2471
+          },
+          {
+            "word": "representative",
+            "weight": 3.0516
+          },
+          {
+            "word": "spokesman",
+            "weight": 2.9216
+          },
+          {
+            "word": "said statement",
+            "weight": 2.8488
+          },
+          {
+            "word": "statement",
+            "weight": 2.6576
+          },
+          {
+            "word": "president barack",
+            "weight": 2.6217
+          },
+          {
+            "word": "democratic",
+            "weight": 2.5711
+          }
+        ],
+        "disclaimer": "These features indicate linguistic patterns learned by the model. They do not independently verify the factual accuracy of the article."
+      },
+      "probability_method": "Native predict_proba"
+    },
+    "Multinomial Naive Bayes": {
+      "name": "Multinomial Naive Bayes",
+      "accuracy": 0.9615,
+      "precision": 0.9589,
+      "recall": 0.957,
+      "f1_score": 0.9579,
+      "train_time_seconds": 0.133,
+      "confusion_matrix": {
+        "TP": 3427,
+        "FN": 154,
+        "FP": 147,
+        "TN": 4092,
+        "labels": [
+          "FAKE",
+          "REAL"
+        ],
+        "matrix": [
+          [
+            3427,
+            154
+          ],
+          [
+            147,
+            4092
+          ]
+        ]
+      },
+      "classification_report": {
+        "FAKE": {
+          "precision": 0.9588696138780078,
+          "recall": 0.9569952527227031,
+          "f1-score": 0.9579315164220824,
+          "support": 3581.0
+        },
+        "REAL": {
+          "precision": 0.9637305699481865,
+          "recall": 0.9653220099079972,
+          "f1-score": 0.9645256334708309,
+          "support": 4239.0
+        },
+        "accuracy": 0.9615089514066496,
+        "macro avg": {
+          "precision": 0.9613000919130972,
+          "recall": 0.9611586313153502,
+          "f1-score": 0.9612285749464566,
+          "support": 7820.0
+        },
+        "weighted avg": {
+          "precision": 0.9615046001672006,
+          "recall": 0.9615089514066496,
+          "f1-score": 0.9615060000754897,
+          "support": 7820.0
+        }
+      },
+      "feature_importance": {
+        "top_fake_indicators": [
+          {
+            "word": "image via",
+            "weight": 7.8271
+          },
+          {
+            "word": "featured image",
+            "weight": 7.7201
+          },
+          {
+            "word": "twitter com",
+            "weight": 7.6037
+          },
+          {
+            "word": "pic twitter",
+            "weight": 7.6006
+          },
+          {
+            "word": "getty image",
+            "weight": 7.5081
+          },
+          {
+            "word": "getty",
+            "weight": 7.1475
+          },
+          {
+            "word": "screen capture",
+            "weight": 6.7472
+          },
+          {
+            "word": "pic",
+            "weight": 6.7439
+          },
+          {
+            "word": "century wire",
+            "weight": 6.3825
+          },
+          {
+            "word": "via youtube",
+            "weight": 6.1754
+          },
+          {
+            "word": "via getty",
+            "weight": 6.1726
+          },
+          {
+            "word": "flickr",
+            "weight": 6.0169
+          },
+          {
+            "word": "via screen",
+            "weight": 5.9402
+          },
+          {
+            "word": "somodevilla",
+            "weight": 5.8557
+          },
+          {
+            "word": "chip somodevilla",
+            "weight": 5.8539
+          },
+          {
+            "word": "wire say",
+            "weight": 5.7599
+          },
+          {
+            "word": "news century",
+            "weight": 5.7433
+          },
+          {
+            "word": "boiler room",
+            "weight": 5.721
+          },
+          {
+            "word": "via screengrab",
+            "weight": 5.7175
+          },
+          {
+            "word": "video screen",
+            "weight": 5.7126
+          }
+        ],
+        "top_real_indicators": [
+          {
+            "word": "washington reuters",
+            "weight": 6.5964
+          },
+          {
+            "word": "moscow reuters",
+            "weight": 6.196
+          },
+          {
+            "word": "london reuters",
+            "weight": 6.096
+          },
+          {
+            "word": "reuters republican",
+            "weight": 6.0909
+          },
+          {
+            "word": "rohingya",
+            "weight": 6.0704
+          },
+          {
+            "word": "reuters president",
+            "weight": 6.0066
+          },
+          {
+            "word": "york reuters",
+            "weight": 5.926
+          },
+          {
+            "word": "berlin reuters",
+            "weight": 5.7155
+          },
+          {
+            "word": "reuters senate",
+            "weight": 5.6998
+          },
+          {
+            "word": "beijing reuters",
+            "weight": 5.6515
+          },
+          {
+            "word": "reuters united",
+            "weight": 5.5699
+          },
+          {
+            "word": "rakhine",
+            "weight": 5.489
+          },
+          {
+            "word": "reuters house",
+            "weight": 5.4863
+          },
+          {
+            "word": "catalan",
+            "weight": 5.4649
+          },
+          {
+            "word": "beirut reuters",
+            "weight": 5.4364
+          },
+          {
+            "word": "brussels reuters",
+            "weight": 5.4267
+          },
+          {
+            "word": "puigdemont",
+            "weight": 5.4037
+          },
+          {
+            "word": "paris reuters",
+            "weight": 5.3654
+          },
+          {
+            "word": "reuters democratic",
+            "weight": 5.3569
+          },
+          {
+            "word": "president tayyip",
+            "weight": 5.3503
+          }
+        ],
+        "disclaimer": "These features indicate linguistic patterns learned by the model. They do not independently verify the factual accuracy of the article."
+      },
+      "probability_method": "Native predict_proba"
+    },
+    "Linear SVM": {
+      "name": "Linear SVM",
+      "accuracy": 0.9962,
+      "precision": 0.9989,
+      "recall": 0.9927,
+      "f1_score": 0.9958,
+      "train_time_seconds": 3.892,
+      "confusion_matrix": {
+        "TP": 3555,
+        "FN": 26,
+        "FP": 4,
+        "TN": 4235,
+        "labels": [
+          "FAKE",
+          "REAL"
+        ],
+        "matrix": [
+          [
+            3555,
+            26
+          ],
+          [
+            4,
+            4235
+          ]
+        ]
+      },
+      "classification_report": {
+        "FAKE": {
+          "precision": 0.9988760887889857,
+          "recall": 0.9927394582518849,
+          "f1-score": 0.9957983193277311,
+          "support": 3581.0
+        },
+        "REAL": {
+          "precision": 0.9938981459751232,
+          "recall": 0.9990563812219864,
+          "f1-score": 0.9964705882352941,
+          "support": 4239.0
+        },
+        "accuracy": 0.9961636828644501,
+        "macro avg": {
+          "precision": 0.9963871173820544,
+          "recall": 0.9958979197369356,
+          "f1-score": 0.9961344537815127,
+          "support": 7820.0
+        },
+        "weighted avg": {
+          "precision": 0.996177687307149,
+          "recall": 0.9961636828644501,
+          "f1-score": 0.9961627372176491,
+          "support": 7820.0
+        }
+      },
+      "feature_importance": {
+        "top_fake_indicators": [
+          {
+            "word": "via",
+            "weight": 6.3682
+          },
+          {
+            "word": "read",
+            "weight": 4.1007
+          },
+          {
+            "word": "video",
+            "weight": 3.5793
+          },
+          {
+            "word": "breaking",
+            "weight": 2.6506
+          },
+          {
+            "word": "gop",
+            "weight": 2.3756
+          },
+          {
+            "word": "president trump",
+            "weight": 2.357
+          },
+          {
+            "word": "image",
+            "weight": 2.2623
+          },
+          {
+            "word": "obama",
+            "weight": 2.2421
+          },
+          {
+            "word": "featured image",
+            "weight": 2.1319
+          },
+          {
+            "word": "watch",
+            "weight": 2.004
+          },
+          {
+            "word": "featured",
+            "weight": 1.9034
+          },
+          {
+            "word": "hillary",
+            "weight": 1.8597
+          },
+          {
+            "word": "sen",
+            "weight": 1.8333
+          },
+          {
+            "word": "wire",
+            "weight": 1.7763
+          },
+          {
+            "word": "entire story",
+            "weight": 1.7097
+          },
+          {
+            "word": "rep",
+            "weight": 1.7036
+          },
+          {
+            "word": "getty",
+            "weight": 1.688
+          },
+          {
+            "word": "century wire",
+            "weight": 1.5302
+          },
+          {
+            "word": "getty image",
+            "weight": 1.5049
+          },
+          {
+            "word": "reportedly",
+            "weight": 1.4774
+          }
+        ],
+        "top_real_indicators": [
+          {
+            "word": "reuters",
+            "weight": 14.9527
+          },
+          {
+            "word": "washington reuters",
+            "weight": 4.6356
+          },
+          {
+            "word": "said",
+            "weight": 4.6164
+          },
+          {
+            "word": "president donald",
+            "weight": 2.4492
+          },
+          {
+            "word": "reuters president",
+            "weight": 2.4423
+          },
+          {
+            "word": "york reuters",
+            "weight": 2.0073
+          },
+          {
+            "word": "factbox",
+            "weight": 1.9003
+          },
+          {
+            "word": "nov",
+            "weight": 1.6529
+          },
+          {
+            "word": "tuesday",
+            "weight": 1.6519
+          },
+          {
+            "word": "washington",
+            "weight": 1.6227
+          },
+          {
+            "word": "president barack",
+            "weight": 1.5796
+          },
+          {
+            "word": "wednesday",
+            "weight": 1.5137
+          },
+          {
+            "word": "friday",
+            "weight": 1.3864
+          },
+          {
+            "word": "news conference",
+            "weight": 1.3371
+          },
+          {
+            "word": "television",
+            "weight": 1.2577
+          },
+          {
+            "word": "nov election",
+            "weight": 1.1888
+          },
+          {
+            "word": "thursday",
+            "weight": 1.1874
+          },
+          {
+            "word": "showed",
+            "weight": 1.1725
+          },
+          {
+            "word": "republican president",
+            "weight": 1.157
+          },
+          {
+            "word": "monday",
+            "weight": 1.1537
+          }
+        ],
+        "disclaimer": "These features indicate linguistic patterns learned by the model. They do not independently verify the factual accuracy of the article."
+      },
+      "probability_method": "CalibratedClassifierCV (Platt Sigmoid Scaling on LinearSVC)"
+    }
+  },
+  "dataset_statistics": {
+    "raw_total": 44898,
+    "raw_fake": 23481,
+    "raw_true": 21417,
+    "total_articles": 39105,
+    "fake_articles": 17908,
+    "real_articles": 21197,
+    "duplicates_removed": 5793,
+    "detected_columns": [
+      "title",
+      "text",
+      "subject",
+      "date",
+      "label",
+      "combined_raw"
+    ],
+    "combined_columns": [
+      "title",
+      "text"
+    ],
+    "files_used": [
+      "Fake.csv",
+      "True.csv"
+    ],
+    "train_samples": 31280,
+    "test_samples": 7820,
+    "tfidf_features": 10000,
+    "vocabulary_size": 10000,
+    "test_split_ratio": 0.2,
+    "random_state": 42
+  },
+  "tfidf_parameters": {
+    "max_features": 10000,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_df": 0.9,
+    "sublinear_tf": true
+  },
+  "disclaimer": "These features indicate linguistic patterns learned by the model. They do not independently verify the factual accuracy of the article."
+}
